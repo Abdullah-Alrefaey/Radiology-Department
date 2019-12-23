@@ -22,7 +22,6 @@ router.get('/', (req, res) => {
 
 // Add device Form
 router.post('/add', upload.single('avatar'), (req, res) => {
-    console.log(req.file);
 
     const newDevice = {
         devName: req.body.name,
@@ -35,7 +34,7 @@ router.post('/add', upload.single('avatar'), (req, res) => {
     new Device(newDevice)
     .save()
     .then(device => {
-        res.redirect('/devices', {
+        res.render('devices/index', {
             devices: device
         });
     });
