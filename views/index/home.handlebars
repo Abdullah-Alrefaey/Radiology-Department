@@ -1,0 +1,11 @@
+{{#ifEquals user.role 'Patient'}}
+    <h1>Welcome Mr. {{user.firstName}}</h1>
+    <h4>This is the Home Page</h4>
+{{/ifEquals}}
+
+{{#ifEquals user.role 'Admin'}}
+    <h1>Welcome Admin {{admin.firstName}}</h1>
+    <h4>This is the Home Page</h4>
+{{/ifEquals}}
+
+<h1>Welcome Home Page</h1>

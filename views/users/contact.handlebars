@@ -1,0 +1,37 @@
+<br>
+<div class="row">
+    <h3 class="text-center">Complains or Special Request</h3>
+    <form action="/users/contact" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" value="{{firstName}}" name="firstName" required>
+                <label for="firstName">Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+            <input type="email" name="email" value="{{email}}" required>
+            <label for="email">Email</label>
+            </div>
+        </div>
+
+        <label>What is your role</label>
+        <select class="browser-default" name="role" required>
+            <option value="" disabled selected>Choose Your Role</option>
+            <option value="Patient">Patient</option>
+            <option value="Doctor">Doctor</option>
+        </select>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Leave your comments here..</h5>
+                <textarea name="comments"></textarea>    
+            </div>
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

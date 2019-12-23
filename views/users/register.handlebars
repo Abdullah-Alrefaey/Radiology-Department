@@ -1,0 +1,48 @@
+<br>
+<div class="row">
+    <h3 class="text-center">Account Register</h3>
+    <form action="/users/register" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" value="{{firstName}}" name="firstName" required>
+                <label for="first_name">First Name</label>
+            </div>
+                <div class="input-field col s6">
+                <input name="lastName" type="text" value="{{lastName}}" name="lastName" required>
+                <label for="lastName">Last Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="password" name="password" value="{{password}}" minlength="4" required>
+                <label for="password">Password</label>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="password" name="password2" value="{{password2}}" minlength="4" required>
+                    <label for="password2">Confirm Password</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+            <input type="email" name="email" value="{{email}}" required>
+            <label for="email">Email</label>
+            </div>
+        </div>
+
+        <label>Role</label>
+        <select class="browser-default" name="role" required>
+            <option value="" disabled selected>Choose Your Role</option>
+            <option value="Patient">Patient</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Admin">Admin</option>
+        </select>
+        <br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<nav class="grey darken-3">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/home" class="brand-logo center">Radiology Department</a>
+            <a href="#" data-activates="main-menu" class="button-collapse show-on-large"><i class="fa fa-bars"></i></a>
+
+            {{!-- Right Nav --}}
+
+            <ul class="right hide-on-small-only">
+                {{#if user}}
+                    <li><a href="/users/me"><i class="fa fa-user"></i> Profile</a></li>
+                    <li><a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a></li> 
+                {{else}}
+                    <li><a class="btn grey darken-1" href="/users/register">Sign Up</a></li>
+                    <li><a class="btn grey darken-1" href="/users/login">Login</a></li>
+                {{/if}}
+            </ul>
+
+
+            {{!-- SIDE MENU --}}
+            <ul class="side-nav" id="main-menu">
+                <li>
+                    <a href="/devices/"><i class="fa fa-h-square" aria-hidden="true"></i> Devices</a>
+                </li>
+                <li>
+                    <a href="/doctors/"><i class="fa fa-user-md" aria-hidden="true"></i> Doctors</a>
+                </li>
+                <li>
+                    <a href="/patients/"><i class="fa fa-user"></i> Patients</a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="/users/logout"><i class="fa fa-sign-out"></i> Logout</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,43 @@
+body
+{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main
+{
+    flex: 1 0 auto;
+}
+
+.nav-wrapper .fa-bars
+{
+    font-size: 25px;
+}
+
+footer
+{
+    margin-top: 20px;
+}
+
+.story-text
+{
+    height: 120px;
+}
+
+.card-title
+{
+    text-transform: capitalize;
+}
+
+#prof_pic
+{
+    height: 250px;
+    width: 250px;
+}
+
+.device-img
+{
+    width: 400px;
+    height: 200px;
+}

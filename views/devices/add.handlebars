@@ -1,0 +1,39 @@
+<h1>Add New Device</h1>
+<div class="row">
+    <form action="/devices/add" method="post" enctype="multipart/form-data" class="col s12">
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="name">
+                <label for="name">Device Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="code">
+                <label for="code">Device Code</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Description of the device</h5>
+                <textarea name="description"></textarea>    
+            </div>
+        </div>
+
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>Device Picture</span>
+                <input type="file" name="avatar">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+
+        <input type="submit" value="Save" class="btn">
+
+    </form>
+</div>
