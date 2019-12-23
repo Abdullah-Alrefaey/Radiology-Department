@@ -35,7 +35,7 @@ router.post('/add', upload.single('avatar'), (req, res) => {
     new Device(newDevice)
     .save()
     .then(device => {
-        res.redirect('/devices/index', {
+        res.redirect('/devices', {
             devices: device
         });
     });
