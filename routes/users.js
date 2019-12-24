@@ -103,7 +103,7 @@ router.post('/me/avatar', ensureAuthenticated, upload.single('avatar'), async (r
 });
 
 
-// Contact us form Route
+// Contact Us form Route
 router.get('/contact', (req, res) => {
     res.render('users/contact');
 });
