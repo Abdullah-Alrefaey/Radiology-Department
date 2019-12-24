@@ -96,7 +96,7 @@ router.get('/me', ensureAuthenticated, (req, res) => {
 
 // Update Profile Picture
 router.post('/me/avatar', ensureAuthenticated, upload.single('avatar'), async (req, res) => {
-    console.log(req.file);
+    // console.log(req.file);
     req.user.image = req.file.path;
     await req.user.save();
     res.redirect('/users/me');

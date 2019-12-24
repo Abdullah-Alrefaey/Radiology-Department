@@ -1,33 +1,40 @@
-<h2>Patients Registered In The Department</h2>
+<h2>Doctors Registered In The Department</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>D_Code</th>
-            <th>Dev_Code</th>
-            <th>Examine Patients</th>
-        </tr>
-    </thead>
+{{#ifEquals user.role 'Admin'}}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>D_Code</th>
+                <th>Dev_Code</th>
+                <th>Examine Patients</th>
+            </tr>
+        </thead>
 
-    <tbody>
-        <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>Doctor 1</td>
-        </tr>
-        <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-            <td>Doctor 2</td>
-        </tr>
-        <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-            <td>Doctor 3</td>
-        </tr>
-    </tbody>
+        <tbody>
+            <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+                <td>Doctor 1</td>
+            </tr>
+            <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+                <td>Doctor 2</td>
+            </tr>
+            <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+                <td>Doctor 3</td>
+            </tr>
+        </tbody>
 </table>
+{{/ifEquals}}
+
+{{#ifEquals user.role 'Patient'}}
+    <h4>You are not allowed to see all the doctors</h4>
+    <a href="/doctors/me/{{id}}">Click here to see your doctor</a>
+{{/ifEquals}}

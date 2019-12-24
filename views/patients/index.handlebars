@@ -1,5 +1,6 @@
 <h2>Patients Registered In The Department</h2>
 
+{{#ifEquals user.role 'Admin'}}
 <table>
     <thead>
         <tr>
@@ -32,3 +33,8 @@
         </tr>
     </tbody>
 </table>
+{{/ifEquals}}
+
+{{#ifEquals user.role 'Patient'}}
+    <h4>You are not allowed to see all the patients</h4>
+{{/ifEquals}}

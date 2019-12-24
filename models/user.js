@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema(
         password: {
             type: String,
             required: true,
-            minlength: 7,
+            minlength: 5,
             validate(value) {
                 if (value.toLowerCase().includes('password'))
                 {
@@ -44,12 +44,17 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        deviceType: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Device'
+        },
         date: {
             type: Date,
-            default: Date.now
+            default: Date.now()
         }
     }
 );
+
 
 // Create users model
 const User = mongoose.model('User', userSchema);

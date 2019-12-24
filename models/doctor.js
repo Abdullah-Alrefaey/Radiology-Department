@@ -44,12 +44,24 @@ const doctorSchema = new mongoose.Schema(
             type: String,
             default: 'Doctor'
         },
+        examines: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Patient'
+        },
         date: {
             type: Date,
             default: Date.now
         }
     }
 );
+
+
+// Create Virtual Property (relationship between doctors and patients)
+doctorSchema.virtual('patients', {
+    ref: 'Patient',
+    localField: '_id',
+    foreignField: 'examines'
+});
 
 // Create users model
 const Doctor = mongoose.model('Doctor', doctorSchema);

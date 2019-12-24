@@ -22,12 +22,23 @@
                 <li>
                     <a href="/devices/"><i class="fa fa-h-square" aria-hidden="true"></i> Devices</a>
                 </li>
-                <li>
-                    <a href="/doctors/"><i class="fa fa-user-md" aria-hidden="true"></i> Doctors</a>
-                </li>
-                <li>
-                    <a href="/patients/"><i class="fa fa-user"></i> Patients</a>
-                </li>
+                {{#ifEquals user.role 'Admin'}}
+                    <li>
+                        <a href="/doctors/"><i class="fa fa-user-md" aria-hidden="true"></i> Doctors</a>
+                    </li>
+                    <li>
+                        <a href="/patients/"><i class="fa fa-user"></i> Patients</a>
+                    </li>
+                {{/ifEquals}}
+
+                {{#ifEquals user.role 'Patient'}}
+                    <li>
+                        <a href="/doctors/"><i class="fa fa-user-md" aria-hidden="true"></i> Doctors</a>
+                    </li>
+                    <li>
+                        <a href="/patients/"><i class="fa fa-user"></i> Patients</a>
+                    </li>
+                {{/ifEquals}}
 
                 <li class="divider"></li>
 
