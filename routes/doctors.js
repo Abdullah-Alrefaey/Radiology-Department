@@ -26,6 +26,7 @@ router.get('/me/:id', (req, res) => {
             }
             else
             {
+                // Not found
                 res.redirect('/home');
             }
         }
